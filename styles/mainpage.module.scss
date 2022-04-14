@@ -3,3 +3,145 @@
     min-width: 400px;
     margin: auto;
 }
+
+.findBlock {
+    width: 100%;
+
+    background: url(../public/background1.png);
+    border-radius: 8px;
+    padding: 30px 0 20px 90px;
+    box-sizing: border-box;
+    object-fit: contain;
+
+    h1 {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 20px;
+
+        text-transform: uppercase;
+
+
+        color: #FFFFFF;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        span {
+            color: #FF8160;
+        }
+    }
+}
+
+.inputBlock {
+    display: flex;
+    width: 80%;
+    min-width: 350px;
+    margin-bottom: 50px;
+
+    button {
+        height: 50px;
+        width: 120px;
+
+        background: #FFFFFF;
+        border-radius: 8px;
+        border: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        color: #000000;
+    }
+}
+
+.inputHolder {
+
+    width: 50%;
+    position: relative;
+
+    svg {
+        position: absolute;
+        right: 0;
+        top: 15px;
+
+        cursor: pointer;
+    }
+
+    input {
+        height: 50px;
+        width: 100%;
+        margin-left: 20px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        border: 0;
+        font-size: 16px;
+        box-sizing: border-box;
+
+        padding: 10px;
+
+        &::placeholder {
+            color: #000000;
+
+            opacity: 0.2;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.materialTypes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 85px;
+    position: relative;
+
+    p {
+        position: absolute;
+
+        top: -50px;
+        right: 5px;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        text-decoration-line: underline;
+        color: #DB6141;
+
+
+    }
+}
+
+.materialType {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background: rgba(147, 154, 162, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    align-items: center;
+
+    img {
+        width: 170px;
+        height: 110px;
+        object-fit: contain;
+        position: absolute;
+        bottom: 10px;
+
+    }
+
+    h1 {
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+
+    }
+}
