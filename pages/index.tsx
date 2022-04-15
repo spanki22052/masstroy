@@ -1,5 +1,5 @@
-import { CatalogSvg, SearchSvg } from "svg/";
-import MainLayout from "components/MainLayout";
+import { ArrowSvg, CatalogSvg, SearchSvg } from "svg/";
+import NavbarComponent from "components/Navbar";
 import classes from "styles/mainpage.module.scss";
 import "styles/mainpage.module.scss";
 import Image from "next/image";
@@ -15,21 +15,22 @@ export default function Index() {
     { title: "Напольные покрытия", img: "2.png" },
     { title: "Скобяные изделия", img: "3.png" },
     { title: "Строительные материалы", img: "4.png" },
+    { title: "Строительные материалы", img: "4.png" },
     { title: "Потолки", img: "5.png" },
   ];
 
   return (
-    <MainLayout title="Главная страница">
+    <NavbarComponent title="Главная страница">
       <div className={classes.mainpage}>
         <div className={classes.findBlock}>
           <div className={classes.inputBlock}>
             <button>
               <CatalogSvg /> Каталог
             </button>
-            <span className={classes.inputHolder}>
+            <div className={classes.inputHolder}>
               <input type="text" placeholder="Введите запрос" />
               <SearchSvg />
-            </span>
+            </div>
           </div>
           <h1>МАССТРОЙ</h1>
 
@@ -54,7 +55,31 @@ export default function Index() {
             );
           })}
         </div>
+
+        <div className={classes.banner}>
+          <div className={classes.infoBlock}>
+            <h1>Двойная выгода</h1>
+            <h2>
+              Более мелкие какие-то детали, которые можно описать двумя
+              предложениями
+            </h2>
+            <button>Подробнее</button>
+          </div>
+          <div className={classes.leftA}>
+            <ArrowSvg />
+          </div>
+          <div className={classes.rightA}>
+            <ArrowSvg />
+          </div>
+          <div className={classes.dots}>
+            <div className={classes.dotS} />
+            <div className={classes.dot} />
+            <div className={classes.dot} />
+            <div className={classes.dot} />
+            <div className={classes.dot} />
+          </div>
+        </div>
       </div>
-    </MainLayout>
+    </NavbarComponent>
   );
 }

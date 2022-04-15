@@ -10,13 +10,14 @@ import {
 import Head from "next/head";
 import { FC, ReactNode } from "react";
 import classes from "styles/navbar.module.scss";
+import useWindowDimensions from "components/Functions/getScreenSize";
 
 type layoutProps = {
   children: ReactNode;
   title: string;
 };
 
-const MainLayout: FC<layoutProps> = ({ children, title }) => {
+const NavbarComponent: FC<layoutProps> = ({ children, title }) => {
   return (
     <>
       <Head>
@@ -24,6 +25,17 @@ const MainLayout: FC<layoutProps> = ({ children, title }) => {
       </Head>
 
       <div className={classes.navbar}>
+        <div className={classes.adaptiveInfoBlock}>
+          <div className={classes.location}>
+            <MarkSvg />
+            <p>Москва, улица Ленина 8</p>
+          </div>
+          <div className={classes.contactus}>
+            <PhoneSvg />
+            <p>8 (495) 012 - 34 - 56</p>
+          </div>
+        </div>
+
         <div className={classes.navholder}>
           <LogoSvg />
           <div className={classes.location}>
@@ -60,4 +72,4 @@ const MainLayout: FC<layoutProps> = ({ children, title }) => {
   );
 };
 
-export default MainLayout;
+export default NavbarComponent;
