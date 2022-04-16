@@ -38,7 +38,9 @@ export default function Index() {
 
         <CategoriesComponent materialsList={materialsList} />
 
-        <Banner />
+        <Banner img={"1"} />
+        <CategoriesComponent materialsList={materialsList} />
+        <Banner img={"2"} />
       </div>
     </NavbarComponent>
   );

@@ -1,10 +1,15 @@
+import { FC } from "react";
 import { ArrowSvg } from "svg/";
 import classes from "./banner.module.scss";
 
-export default function Banner() {
+type layoutProps = {
+  img: string;
+};
+
+const Banner: FC<layoutProps> = ({ img }) => {
   return (
     <div
-      style={{ backgroundImage: "url('backgrounds/1.png')" }}
+      style={{ backgroundImage: `url('backgrounds/${img}.png')` }}
       className={classes.banner}
     >
       <div className={classes.infoBlock}>
@@ -30,4 +35,6 @@ export default function Banner() {
       </div>
     </div>
   );
-}
+};
+
+export default Banner;
