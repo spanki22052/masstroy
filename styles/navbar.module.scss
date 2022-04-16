@@ -9,6 +9,23 @@
     justify-content: center;
     z-index: 19219;
 
+    @media screen and (max-width: 700px) {
+
+        .navlist {
+            .navblock {
+                width: 80px;
+
+                svg {
+                    width: 18px;
+                }
+
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
     @media screen and (max-width: 1000px) {
         height: auto;
         display: flex;

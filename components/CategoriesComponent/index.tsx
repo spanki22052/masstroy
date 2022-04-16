@@ -1,3 +1,4 @@
+import { ArrowSvg } from "svg/";
 import { materialsI } from "components/interfaces";
 import { FC } from "react";
 import classes from "./categories.module.scss";
@@ -23,6 +24,12 @@ const CategoriesComponent: FC<layoutProps> = ({ materialsList }) => {
           </div>
         );
       })}
+      <div className={classes.leftA}>
+        <ArrowSvg />
+      </div>
+      <div className={classes.rightA}>
+        <ArrowSvg />
+      </div>
     </div>
   );
 };

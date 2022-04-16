@@ -3,6 +3,14 @@
     min-width: 400px;
     margin: auto;
     padding-top: 120px;
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
+
+        .findBlock {
+            border-radius: 1px;
+        }
+    }
 }
 
 .findBlock {
@@ -13,6 +21,40 @@
     padding: 30px 0 20px 90px;
     box-sizing: border-box;
     object-fit: contain;
+
+    @media screen and (max-width: 1200px) {
+        padding: 10px 0 20px 30px;
+
+        h1 {
+            font-size: 40px !important;
+        }
+
+        .inputBlock {
+            width: 100%;
+            padding: 10px 0 20px 10px;
+
+            .inputHolder {
+                width: 60%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        padding: 10px 0 20px 20px;
+
+        h1 {
+            font-size: 27px !important;
+        }
+
+        .inputBlock {
+            width: 100%;
+            padding: 10px 0 20px 10px;
+
+            .inputHolder {
+                width: 60%;
+            }
+        }
+    }
 
     h1 {
         font-weight: 700;
