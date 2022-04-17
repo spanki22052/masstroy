@@ -21,6 +21,7 @@ type LayoutProps = {
 };
 
 const NavbarComponent: FC<LayoutProps> = ({ children, title }) => {
+   let x = 1;
    return (
       <>
          <Head>
