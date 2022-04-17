@@ -10,8 +10,13 @@
         .findBlock {
             border-radius: 1px;
         }
+
+        .bigText {
+            font-size: 1em;
+        }
     }
 }
+
 
 .findBlock {
     width: 100%;
@@ -59,7 +64,7 @@
     h1 {
         font-weight: 700;
         font-size: 50px;
-        line-height: 20px;
+        line-height: 35px;
 
         text-transform: uppercase;
 

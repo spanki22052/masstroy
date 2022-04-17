@@ -1,0 +1,74 @@
+.svgBlock {
+
+    width: 23%;
+    box-sizing: border-box;
+    max-width: 260px;
+
+    background: rgba(147, 154, 162, 0.1);
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+
+    margin-top: 20px;
+
+    svg {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 5px;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+    }
+
+    h1 {
+        width: 80%;
+        font-weight: 600;
+        font-size: 22px;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 19px;
+
+    }
+
+}
+
+.svgBlocks {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 1100px) {
+        .svgBlock {
+            h1 {
+                font-size: 14px;
+            }
+
+            h2 {
+
+                font-size: 11px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .svgBlock {
+            h1 {
+                font-size: 11px;
+            }
+
+            h2 {
+
+                font-size: 9px;
+            }
+        }
+    }
+}
