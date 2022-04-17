@@ -1,6 +1,6 @@
-export interface materialsI {
-  title: string;
-  img: string;
+export interface MaterialsI {
+   title: string;
+   img: string;
 }
 
 export interface SvgTextInterface {

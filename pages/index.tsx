@@ -12,9 +12,10 @@ import "styles/mainpage.module.scss";
 import Banner from "components/Banner";
 import {
   InstInfoInterface,
-  materialsI,
+  MaterialsI,
   SvgTextInterface,
 } from "components/interfaces";
+
 import CategoriesComponent from "components/CategoriesComponent";
 import SvgTextBlock from "components/SvgTextBlocksComponent";
 import InstagramComponent from "components/InstagramComponent";
@@ -43,7 +44,7 @@ export default function Index() {
     },
   ];
 
-  const materialsList: materialsI[] = [
+  const materialsList: MaterialsI[] = [
     { title: "Лакокрасочные материалы", img: "1.png" },
     { title: "Напольные покрытия", img: "2.png" },
     { title: "Скобяные изделия", img: "3.png" },
@@ -95,10 +96,11 @@ export default function Index() {
           </div>
           <h1>МАССТРОЙ</h1>
 
-          <h1>
-            <span>ВСЕ ДЛЯ ВАШЕГО РЕМОНТА</span>
-          </h1>
-        </div>
+
+               <h1>
+                  <span>ВСЕ ДЛЯ ВАШЕГО РЕМОНТА</span>
+               </h1>
+            </div>
 
         <CategoriesComponent materialsList={materialsList} />
         <Banner img={"1"} />
@@ -114,4 +116,5 @@ export default function Index() {
       </div>
     </NavbarComponent>
   );
+
 }
