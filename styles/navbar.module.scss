@@ -1,125 +1,180 @@
 .navbar {
-    width: 100%;
-    height: 100px;
-    position: fixed;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 19219;
+   width: 100%;
+   height: 100px;
+   position: fixed;
+   background: #ffffff;
+   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 19219;
 
-    @media screen and (max-width: 700px) {
+   @media screen and (max-width: 700px) {
+      .navigationList {
+         .navigationBlock {
+            width: 80px;
 
-        .navlist {
-            .navblock {
-                width: 80px;
-
-                svg {
-                    width: 18px;
-                }
-
-                p {
-                    font-size: 13px;
-                }
+            svg {
+               width: 18px;
             }
-        }
-    }
 
-    @media screen and (max-width: 1000px) {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        position: static;
-        margin-bottom: -100px;
+            p {
+               font-size: 13px;
+            }
+         }
+      }
+   }
 
-        .navholder {
-            height: 110px;
-        }
+   @media screen and (max-width: 1000px) {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      position: static;
+      margin-bottom: -100px;
 
-        .location,
-        .contactus {
-            display: none;
-        }
+      .navholder {
+         height: 110px;
+      }
 
-        .adaptiveInfoBlock {
+      .location,
+      .contactus {
+         display: none;
+      }
+
+      .adaptiveInfoBlock {
+         display: flex;
+         justify-content: space-around;
+
+         .location,
+         .contactus {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
 
-
-            .location,
-            .contactus {
-                display: flex;
-                justify-content: space-between;
-
-                p {
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 12px;
-                    color: #FFFFFF;
-                }
-
-                svg {
-                    width: 8px;
-                    height: 12px;
-                    fill: white !important;
-                }
+            p {
+               font-style: normal;
+               font-weight: 400;
+               font-size: 12px;
+               color: #ffffff;
             }
-        }
-    }
 
+            svg {
+               width: 8px;
+               height: 12px;
+               fill: white !important;
+            }
+         }
+      }
+   }
 }
 
 .adaptiveInfoBlock {
-    width: 100%;
-    display: none;
-    background: #DB6141;
-    opacity: 0.8;
-
+   width: 100%;
+   display: none;
+   background: #db6141;
+   opacity: 0.8;
 }
 
 .navholder {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
 
-    width: 80%;
-
+   width: 80%;
 }
 
 .location,
 .contactus {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
+   display: flex;
+   align-items: center;
+   margin-left: 10px;
 
-    p {
-        margin-left: 10px;
-    }
+   p {
+      margin-left: 10px;
+   }
 }
 
-.navlist {
-    display: flex;
-    align-items: center;
-    margin-left: 50px;
+.navigationList {
+   display: flex;
+   align-items: center;
+   margin-left: 50px;
 
-    .navblock {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100px;
-        height: 50px;
-        cursor: pointer;
+   .navigationBlock {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 50px;
+      cursor: pointer;
 
-        p {
-            line-height: 0;
-            font-weight: 500;
-            font-size: 16px;
-            text-align: center;
+      p {
+         line-height: 0;
+         font-weight: 500;
+         font-size: 16px;
+         text-align: center;
 
+         color: #000000;
+      }
+   }
+}
 
-            color: #000000;
-        }
-    }
+.footer {
+   width: 100%;
+   padding: 50px 10px 10px 10px;
+   border-radius: 0;
+   box-sizing: border-box;
+
+   position: relative;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+   background-size: cover;
+
+   @media screen and (max-width: 900px) {
+      .links {
+         width: 60% !important;
+
+         svg {
+            width: 35px;
+            height: 35px;
+         }
+         p {
+            font-size: 13px;
+            margin-left: 5px;
+         }
+      }
+   }
+}
+
+.links {
+   width: 50%;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+
+   svg {
+      width: 50px;
+      height: 50px;
+   }
+
+   p {
+      font-weight: 400;
+      font-size: 18px;
+      color: #ffffff;
+   }
+}
+
+.bottomP {
+   font-family: "Roboto", sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 16px;
+
+   margin-top: 30px;
+
+   color: #ffffff;
 }

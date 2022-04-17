@@ -8,6 +8,7 @@ import { InstInfoInterface, MaterialsI, SvgTextInterface } from "components/inte
 import CategoriesComponent from "components/CategoriesComponent";
 import SvgTextBlock from "components/SvgTextBlocksComponent";
 import InstagramComponent from "components/InstagramComponent";
+import EmailFeedback from "components/EmailFeedback";
 
 export default function Index() {
    const svgTextList: SvgTextInterface[] = [
@@ -101,6 +102,7 @@ export default function Index() {
 
             <h1 className={classes.bigText}>Следите за нами в Instagram</h1>
             <InstagramComponent data={InstPostsList} />
+            <EmailFeedback />
          </div>
       </NavbarComponent>
    );
