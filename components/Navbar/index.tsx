@@ -8,6 +8,7 @@ import {
    PhoneSvg,
    ProfileSvg,
    ShipSvg,
+   TelegramSvg,
    VkSvg,
    WhiteLogo
 } from "svg/";
@@ -21,7 +22,6 @@ type LayoutProps = {
 };
 
 const NavbarComponent: FC<LayoutProps> = ({ children, title }) => {
-   let x = 1;
    return (
       <>
          <Head>
@@ -86,6 +86,7 @@ const NavbarComponent: FC<LayoutProps> = ({ children, title }) => {
                <InstSvg />
                <VkSvg />
                <GooglePlusSvg />
+               <TelegramSvg />
             </div>
             <p className={classes.bottomP}>© 2022 Масстрой</p>
          </div>
