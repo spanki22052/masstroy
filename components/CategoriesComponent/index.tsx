@@ -1,6 +1,6 @@
 import { ArrowSvg } from "svg/";
 import { MaterialsI } from "components/interfaces";
-import { FC, useState } from "react";
+import { FC } from "react";
 import classes from "./categories.module.scss";
 import Slider from "react-slick";
 
@@ -9,7 +9,6 @@ interface LayoutProps {
 }
 
 const CategoriesComponent: FC<LayoutProps> = ({ materialsList }) => {
-   const [currentDot, setDot] = useState<number>(0);
    const settings = {
       dots: true,
       infinite: false,

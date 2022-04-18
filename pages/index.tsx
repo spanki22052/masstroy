@@ -92,10 +92,36 @@ export default function Index() {
             </div>
 
             <CategoriesComponent materialsList={materialsList} />
-            <Banner img={"1"} />
+            <Banner
+               banners={[
+                  {
+                     title: "Двойная выгода",
+                     description: "Более мелкие какие-то детали, которые можно описать двумя предложениями",
+                     img: "1"
+                  },
+                  {
+                     title: "Двойная выгода",
+                     description: "Более мелкие какие-то детали, которые можно описать двумя предложениями",
+                     img: "2"
+                  }
+               ]}
+            />
 
             <CategoriesComponent materialsList={materialsList} />
-            <Banner img={"2"} />
+            <Banner
+               banners={[
+                  {
+                     title: "Двойная выгода",
+                     description: "Более мелкие какие-то детали, которые можно описать двумя предложениями",
+                     img: "2"
+                  },
+                  {
+                     title: "Двойная выгода",
+                     description: "Более мелкие какие-то детали, которые можно описать двумя предложениями",
+                     img: "1"
+                  }
+               ]}
+            />
             <h1 className={classes.bigText}>Наши преимущества</h1>
 
             <SvgTextBlock svgTextList={svgTextList} />

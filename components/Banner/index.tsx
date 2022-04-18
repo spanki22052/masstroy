@@ -1,40 +1,44 @@
 import { FC } from "react";
 import { ArrowSvg } from "svg/";
 import classes from "./banner.module.scss";
+import { BannersListInterface } from "components/interfaces";
+import Slider from "react-slick";
 
-type layoutProps = {
-  img: string;
-};
+interface LayoutProps {
+   banners: BannersListInterface[];
+}
 
-const Banner: FC<layoutProps> = ({ img }) => {
-  return (
-    <div
-      style={{ backgroundImage: `url('backgrounds/${img}.png')` }}
-      className={classes.banner}
-    >
-      <div className={classes.infoBlock}>
-        <h1>Двойная выгода</h1>
-        <h2>
-          Более мелкие какие-то детали, которые можно описать двумя
-          предложениями
-        </h2>
-        <button>Подробнее</button>
+const Banner: FC<LayoutProps> = ({ banners }) => {
+   const settings = {
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 1,
+      initialSlide: 0
+   };
+   const settingsWithModules = {
+      ...settings,
+      dotsClass: classes.button__bar
+   };
+
+   return (
+      <div className={classes.banners}>
+         <Slider className={classes.carousel} {...settingsWithModules}>
+            {banners.map((el, index) => {
+               return (
+                  <div key={index} className={classes.banner}>
+                     <img src={`backgrounds/${el.img} .png`} alt="photo" />
+                     <div className={classes.infoBlock}>
+                        <h1>{el.title}</h1>
+                        <h2>{el.description}</h2>
+                        <button>Подробнее</button>
+                     </div>
+                  </div>
+               );
+            })}
+         </Slider>
       </div>
-      <div className={classes.leftA}>
-        <ArrowSvg />
-      </div>
-      <div className={classes.rightA}>
-        <ArrowSvg />
-      </div>
-      <div className={classes.dots}>
-        <div className={classes.dotS} />
-        <div className={classes.dot} />
-        <div className={classes.dot} />
-        <div className={classes.dot} />
-        <div className={classes.dot} />
-      </div>
-    </div>
-  );
+   );
 };
 
 export default Banner;
