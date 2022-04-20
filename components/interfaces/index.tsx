@@ -20,3 +20,7 @@ export interface BannersListInterface {
    title: string;
    description: string;
 }
+
+export interface LinksInterface {
+   [key: string]: string;
+}

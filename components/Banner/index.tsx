@@ -27,7 +27,7 @@ const Banner: FC<LayoutProps> = ({ banners }) => {
             {banners.map((el, index) => {
                return (
                   <div key={index} className={classes.banner}>
-                     <img src={`backgrounds/${el.img} .png`} alt="photo" />
+                     <img src={`backgrounds/${el.img}.png`} alt="photo" />
                      <div className={classes.infoBlock}>
                         <h1>{el.title}</h1>
                         <h2>{el.description}</h2>

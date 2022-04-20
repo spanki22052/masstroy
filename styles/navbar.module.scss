@@ -93,6 +93,28 @@
    }
 }
 
+.linksLine {
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+
+   a {
+      text-decoration: none;
+   }
+
+   p {
+      font-weight: 500;
+      font-size: 16px;
+      color: #939aa2;
+
+      opacity: 0.5;
+
+      span {
+         margin-left: 5px;
+      }
+   }
+}
+
 .navigationList {
    display: flex;
    align-items: center;
@@ -107,11 +129,13 @@
       height: 50px;
       cursor: pointer;
 
-      p {
+      p,
+      a {
          line-height: 0;
          font-weight: 500;
          font-size: 16px;
          text-align: center;
+         text-decoration: none;
 
          color: #000000;
       }

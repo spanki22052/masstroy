@@ -73,7 +73,7 @@ export default function Index() {
 
    return (
       <NavbarComponent title="Главная страница">
-         <div className={classes.mainpage}>
+         <div className={classes.mainPageStyle}>
             <div className={classes.findBlock}>
                <div className={classes.inputBlock}>
                   <button>

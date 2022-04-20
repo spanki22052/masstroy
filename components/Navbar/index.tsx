@@ -15,13 +15,33 @@ import {
 import Head from "next/head";
 import { FC, ReactNode } from "react";
 import classes from "styles/navbar.module.scss";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { linksList } from "../links";
 
 type LayoutProps = {
    children: ReactNode;
    title: string;
 };
 
+const linksListHandler = (list: string[]) => {
+   return list.map((el, index) => {
+      return (
+         <Link key={index} href={el.length === 0 ? "/" : `${list.filter((_, id) => id < index + 1).join("/")}`}>
+            <a>
+               <p>
+                  {el.length !== 0 && <span> {">"} </span>}
+                  {el.length === 0 ? "Главная" : `${linksList[el]}`}
+               </p>
+            </a>
+         </Link>
+      );
+   });
+};
+
 const NavbarComponent: FC<LayoutProps> = ({ children, title }) => {
+   const router = useRouter().asPath.split("/");
+
    return (
       <>
          <Head>
@@ -41,7 +61,11 @@ const NavbarComponent: FC<LayoutProps> = ({ children, title }) => {
             </div>
 
             <div className={classes.navholder}>
-               <LogoSvg />
+               <Link href="/">
+                  <a>
+                     <LogoSvg />
+                  </a>
+               </Link>
                <div className={classes.location}>
                   <MarkSvg />
                   <p>Москва, улица Ленина 8</p>
@@ -65,14 +89,22 @@ const NavbarComponent: FC<LayoutProps> = ({ children, title }) => {
                      <p>Профиль</p>
                   </div>
                   <div className={classes.navigationBlock}>
-                     <CartSvg />
-                     <p>Корзина</p>
+                     <Link href="/cart">
+                        <a>
+                           <CartSvg />
+                           <p>Корзина</p>
+                        </a>
+                     </Link>
                   </div>
                </div>
             </div>
          </div>
+         <div style={{ height: "110px" }} />
+
+         <div className={classes.linksLine}>{router[1].length !== 0 && linksListHandler(router)}</div>
+
          <main>{children}</main>
-         <div style={{ backgroundImage: "url('backgrounds/footer.png')" }} className={classes.footer}>
+         <div className={`${classes.footer} footer-component`}>
             <WhiteLogo />
             <div className={classes.links}>
                <p>Каталог</p>
@@ -89,6 +121,11 @@ const NavbarComponent: FC<LayoutProps> = ({ children, title }) => {
                <TelegramSvg />
             </div>
             <p className={classes.bottomP}>© 2022 Масстрой</p>
+            <style jsx global>{`
+               .footer-component {
+                  background-image: url("backgrounds/footer.png");
+               }
+            `}</style>
          </div>
       </>
    );

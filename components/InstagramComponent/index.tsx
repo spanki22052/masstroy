@@ -12,15 +12,17 @@ const InstagramComponent: FC<LayoutProps> = ({ data }) => {
       <div className={classes.main}>
          {data.map((el, index) => {
             return (
-               <div
-                  style={{
-                     background: `url('instbackgrounds/${el.img}.png');`
-                  }}
-                  key={index}
-                  className={classes.instBlock}
-               >
+               <div style={{}} key={index} className={`${classes.instBlock} inst-block`}>
                   <h1>{el.hashtag}</h1>
                   {el.isAttached && <AttachmentSvg />}
+
+                  <style jsx global>
+                     {`
+                        .inst-block:nth-child(${index + 1}) {
+                           background: url("instbackgrounds/${el.img}.png");
+                        }
+                     `}
+                  </style>
                </div>
             );
          })}
